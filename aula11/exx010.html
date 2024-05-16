@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste sem net</title>
+  </head>
+  <body>
+    <header><h1>Sistemas de Multas</h1></header>
+    Velocidade do carro: <input type="number" name="numvel" id="numvel" /> Km/h
+    <input type="button" value="Verifcar" onclick="verify()" />
+    <br>
+    <br>
+    <div id="res"></div>
+
+    <script>
+      function verify() {
+        let velo = window.document.getElementById("numvel");
+        let vel = Number(velo.value);
+        let res = document.getElementById("res");
+
+        if (vel > 70) {
+          res.innerHTML = `Voce foi <strong>MULTADO</strong> por andar a <strong>${vel}</strong>`;
+        } else {
+          res.innerHTML = `Sua velocidade atual eh de <strong>${vel}Km/h</h1> `;
+        }
+      }
+    </script>
+  </body>
+</html>

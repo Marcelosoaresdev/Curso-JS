@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDENTIFICAÇÂO</title>
+</head>
+<body>
+    <h1>Sistema de identificação do usúario</h1>
+    Coloque seu país de nascimento aqui: <input type="text" id="txt"> 
+    <input type="button" value="Verificar" onclick="constar()">
+    <div id="res"></div>
+
+    <script>
+        function constar() 
+        {
+            var local = window.document.querySelector('input#txt').value
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Vivendo em <strong>${local}</strong></p>`
+            if (local != 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>ESTRANGEIRO</strong>!</p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>BRASILEIRO</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
